@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
 
-    html = "<h1>Hello {name}! I changed the header</h1>" \
+    html = "<h1>Hello {name}! Adam thinks he's from England</h1>" \
            "<b>Hostname:</b> {hostname}<br/>"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname())
 
