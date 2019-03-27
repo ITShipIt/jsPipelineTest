@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('---Build---') {
             steps {
-                slackSend(message: "Begin Testing", channel: "@trevor_garn")
+                slackSend(message: "Begin Build", channel: "@trevor_garn")
                 sh "docker stop \$(docker ps -q --filter ancestor=demo)"
                 sh "docker build -t demo ."
                 sh "docker run -d -p 4000:80 demo"
